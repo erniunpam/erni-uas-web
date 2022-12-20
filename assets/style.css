@@ -1,0 +1,506 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2 {
+    letter-spacing: 0.8rem;
+}
+
+p {
+    line-height: 1rem;
+}
+
+a {
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header {
+    height: 500px;
+    background:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 75%, rgba(255, 255, 255, 1)),
+        url('images/background.jpg');
+    background-size: cover;
+    overflow: hidden;
+}
+
+.logo {
+    width: 150px;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    position: fixed;
+    background-image: linear-gradient(90deg, #00ffff 0, #00ffff 12.5%, #00ffff 25%, #00f3ff 37.5%, #08d8ea 50%, #27bed3 62.5%, #33a7be 75%, #3a93aa 87.5%, #3e8298 100%);
+    width: 100%;
+    height: 80px;
+    z-index: 999;
+}
+
+/*dropdon menus*/
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.menu-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu-links>ul>li {
+    float: left;
+}
+
+
+.menu-links li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu-links li a:hover {
+    background-color: #fac431;
+    border-radius: 30px;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown:hover .isi-dropdown {
+    display: block;
+}
+
+.isi-dropdown a:hover {
+    color: #fff !important;
+}
+
+.isi-dropdown {
+    position: absolute;
+    border-radius: 10px;
+    display: none;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    background-color: #f9f9f9;
+}
+
+.isi-dropdown a {
+    color: #3c3c3c !important;
+}
+
+.isi-dropdown a:hover {
+    color: #232323 !important;
+    background: #fac431;
+     !important;
+}
+
+/*batas menu dropdown*/
+.menu-links {
+    display: flex;
+    justify-content: space-around;
+    min-width: 20%;
+}
+
+.menu-links li {
+    margin-inline: 20px;
+}
+
+.menu-links a {
+    letter-spacing: 1px;
+    color: white;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    width: 24px;
+}
+
+.close-icon {
+    display: none;
+    cursor: pointer;
+    width: 24px;
+}
+
+
+.jumbotron {
+    padding: 140px 10%;
+    text-align: end;
+    width: 75%;
+    float: right;
+    color: white;
+    margin-top: 80px;
+}
+
+.main-btn {
+    border: none;
+    background-color: #354259;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 30px;
+    color: white;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.4s;
+    letter-spacing: 2px;
+}
+
+.main-btn:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+main {
+    overflow: hidden;
+    padding-inline: 10%;
+    padding-bottom: 20px;
+    background: linear-gradient(0deg, rgba(240, 235, 227, 1) 50%, rgba(255, 255, 255, 1) 100%);
+    ;
+}
+
+main img {
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.5);
+}
+
+.content {
+    padding-block: 20px;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin-block: 15px;
+}
+
+.divider:before,
+.divider:after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    margin: 0 1em;
+    background: black;
+}
+
+.line {
+    border: 0;
+    height: 1px;
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+article h2,
+.article-description {
+    text-align: center;
+}
+
+.option {
+    display: flex;
+    place-content: center;
+}
+
+.option img {
+    /* filter: blur(1.5px); */
+    transition: 1s ease;
+}
+
+.option img:hover {
+    filter: none;
+    transform: scale(1.1);
+    transition: 1s ease;
+}
+
+.tourism-figure {
+    text-align: center;
+    margin: 20px;
+}
+
+
+.tourism-figure img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.option-title {
+    margin: 0 auto;
+    font-weight: bold;
+    letter-spacing: 5px;
+    background-color: #354259;
+    color: white;
+    border-radius: 30px;
+    padding: 12px 30px;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+.section-wrapper {
+    padding-block: 30px;
+}
+
+.tourism-section {
+    overflow: auto;
+    padding: 50px 20px;
+}
+
+.tourism-section:nth-child(3) .slideshow {
+    float: right;
+    margin: 0 0 0 20px;
+}
+
+.slideshow {
+    width: 40%;
+    min-width: 435px;
+    margin: 0 20px 0 0;
+    float: left;
+}
+
+.slide {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity 1.6s;
+}
+
+.slide-out {
+    opacity: 0;
+}
+
+.tourism-description p {
+    text-align: justify;
+}
+
+.tourism-description a {
+    float: right;
+}
+
+.tourism-section:nth-child(3) .tourism-description {
+    width: 100%;
+}
+
+.tourism-section:nth-child(3) .tourism-description a {
+    float: left;
+}
+
+.about-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-container h3 {
+    letter-spacing: 5px;
+}
+
+.about-me-desc {
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    background-color: #354259;
+    color: white;
+}
+
+.profile {
+    text-align: center;
+    border-radius: 10px;
+}
+
+.profile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding: 4px;
+    background-color: #354259;
+}
+
+.profile h3 {
+    padding: 10px;
+    background-color: #354259;
+    border-radius: 15px;
+    color: white;
+    margin: 20px auto;
+}
+
+footer {
+    padding-inline: 10%;
+    color: white;
+    background-color: #354259;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+footer img {
+    width: 30px;
+}
+
+.flex-icon {
+    display: flex;
+    gap: 20px
+}
+
+.contact {
+    text-align: end;
+}
+
+.contact ul {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.contact li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.copyright p {
+    text-align: center;
+    margin: 0;
+}
+
+
+@media screen and (max-width:900px) {
+    .menu-links {
+        position: absolute;
+        padding: 20px;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        max-width: 100%;
+        overflow: hidden;
+        background-color: rgb(53, 66, 89, 0.8);
+        backdrop-filter: blur(2px);
+        border-radius: 0 0 0 80px;
+        box-shadow: -1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+        transform: translateY(-100%);
+        transition: transform 0.5s ease-in;
+        z-index: 999;
+    }
+
+    .menu-links li {
+        margin-block: 20px;
+    }
+
+    .menu-icon {
+        display: block
+    }
+
+    .close-icon {
+        display: block;
+        position: absolute;
+        top: 15%;
+        right: 2%;
+        transform: translateY(-200%);
+        transition: transform 0.4s ease-in;
+        z-index: 999;
+    }
+
+    .jumbotron {
+        width: 100%;
+    }
+
+    .jumbotron button {
+        display: none;
+    }
+
+    .option {
+        display: none;
+    }
+
+    .slideshow,
+    .tourism-section:nth-child(3) .slideshow {
+        width: 100%;
+        min-width: 0;
+        margin: 0 0 20px 0;
+    }
+
+    .tourism-description a,
+    .tourism-section:nth-child(3) .tourism-description a {
+        float: none;
+    }
+
+    .section-wrapper,
+    .tourism-description h3 {
+        text-align: center;
+    }
+
+    .about-container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .about-me-desc h3 {
+        text-align: center;
+    }
+
+    .about-me-desc,
+    aside {
+        width: 100%;
+    }
+
+    .profile h3 {
+        width: fit-content;
+    }
+
+    .contact,
+    .socials {
+        width: 100%;
+        text-align: center;
+    }
+
+    .socials ul {
+        place-content: center;
+    }
+
+    .contact ul {
+        align-items: center;
+    }
+
+}
+
+.menu-icon-none {
+    display: none
+}
+
+.menu-links-active,
+.close-icon-active {
+    transform: translateY(0%);
+}

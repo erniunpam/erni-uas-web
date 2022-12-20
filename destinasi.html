@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ERNI | 201011400071</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+</head>
+<style>
+  /* body {
+  padding: 20px;
+  font-family: sans-serif;
+  background: #f2f2f2;
+} */
+  img {
+    width: 100%;
+    /* need to overwrite inline dimensions */
+    height: auto;
+  }
+
+  h2 {
+    margin-bottom: .5em;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1em;
+  }
+
+
+  /* hover styles */
+  .location-listing {
+    position: relative;
+  }
+
+  .location-image {
+    line-height: 0;
+    overflow: hidden;
+  }
+
+  .location-image img {
+    filter: blur(0px);
+    transition: filter 0.3s ease-in;
+    transform: scale(1.1);
+  }
+
+  .location-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .5s;
+    background: rgba(90, 0, 10, 0.4);
+    color: white;
+
+    /* position the text in t’ middle*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .location-listing:hover .location-title {
+    opacity: 1;
+  }
+
+  .location-listing:hover .location-image img {
+    filter: blur(2px);
+  }
+
+
+  /* for touch screen devices */
+  @media (hover: none) {
+    .location-title {
+      opacity: 1;
+    }
+
+    .location-image img {
+      filter: blur(2px);
+    }
+  }
+</style>
+
+<body class="#">
+  <nav>
+    <img class="logo" src="assets/images/pesona-indonesia.png" alt="Indonesia Logo" />
+    <ul class="menu-links">
+      <li><a class="nav-link" href="index.html">Beranda</a></li>
+      <li><a class="nav-link" href="destinasi.html">Destinasi</a></li>
+      <li class="dropdown"><a>Etnik</a>
+        <ul class="isi-dropdown">
+          <li><a href="event.html">Event</a></li>
+          <li><a href="atraksi.html">Atraksi</a></li>
+        </ul>
+      </li>
+      <li><a class="nav-link" href="hotel.html">Hotel</a></li>
+      <li><a class="nav-link" href="about.html">About</a></li>
+    </ul>
+    <img class="close-icon" src="assets/images/svg_close.svg" alt="close icon" />
+    <img class="menu-icon" src="assets/images/svg_menu.svg" alt="menu icon" />
+
+  </nav>
+  <main>
+    <div class="content">
+      <article>
+        <div class="divider">
+          <h2 id="tourism">Inspirasi</h2>
+        </div>
+
+
+        <center>
+          <div class="w3-content w3-section" style="max-width:100%">
+            <img class="mySlides" src="assets/banner/Mari-Rayakan-Sabang-Marine-Festival-2016-Lewat_Tulisan.jpg"
+              style="width:100%">
+            <img class="mySlides" src="assets/banner/banner-pesonaindonesia-optimus.jpg" style="width:100%">
+            <img class="mySlides" src="assets/banner/BANNER_021.jpg" style="width:100%">
+
+          </div>
+        </center>
+        <script>
+          var myIndex = 0;
+          carousel();
+
+          function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+              myIndex = 1
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+          }
+        </script>
+
+        <div class="divider">
+          <h4 id="">Jelajahi Berbagai Destinasi Indonesia</h4>
+        </div>
+        <p class="article-description">
+          Kekayaan alam dan budaya merupakan komponen penting dalam pariwisata
+          di Indonesia. Pantai-pantai di Bali, gunung bromo di jawa timur, dan
+          berbagai taman nasional di Sumatra merupakan contoh tujuan wisata
+          alam yang dapat di kunjungi di Indonesia.
+        </p>
+        <!-- gambar wisata -->
+        <div class="child-page-listing">
+          <h2>Wisata Populer</h2>
+          <div class="grid-container">
+            <article id="3685" class="location-listing">
+              <a class="location-title" href="#">
+                Panorama Bali</a>
+              <div class="location-image">
+                <a href="#">
+                  <img width="300" height="169" src="assets/wisata/bali_ulun_danu_temple_getty_markacontributor_.jpg"
+                    alt="san francisco"> </a>
+              </div>
+            </article>
+            <article id="3688" class="location-listing">
+              <a class="location-title" href="#">
+                Candi Borobudur </a>
+              <div class="location-image">
+                <a href="#">
+                  <img width="300" height="169" src="assets/wisata/Candi Borobudur.jpg" alt="london"> </a>
+              </div>
+            </article>
+            <article id="3691" class="location-listing">
+              <a class="location-title" href="#">
+                Papua </a>
+              <div class="location-image">
+                <a href="#">
+                  <img width="300" height="169" src="assets/wisata/papua.jpg" alt="beijing"> </a>
+              </div>
+            </article>
+            <article id="3694" class="location-listing">
+              <a class="location-title" href="#">
+                Jakarta </a>
+              <div class="location-image">
+                <a href="#">
+                  <img width="300" height="169" src="assets/wisata/jakarta.jpg" alt="cape town"> </a>
+              </div>
+            </article>
+            <article id="3697" class="location-listing">
+              <a class="location-title" href="#">
+                Island Kalimantan </a>
+              <div class="location-image">
+                <a href="#">
+                  <img width="300" height="169" src="assets/wisata/gunung pulau.jpg" alt="new york"> </a>
+              </div>
+            </article>
+            <article id="3700" class="location-listing">
+              <a class="location-title" href="#">
+                Pulau Raja Ampat </a>
+              <div class="location-image">
+                <a href="#">
+                  <img width="300" height="169" src="assets/wisata/raja ampat.jpg" alt="paris">
+                </a>
+              </div>
+            </article>
+          </div>
+          <!-- end grid container -->
+        </div>
+
+    </div>
+    <hr>
+    <h2 class="btn btn-outline-primary">Beli Tiketmu Sekarang</h2>
+    <p>Silahkan isi dan lengkapi form dibawah ini dengan benar</p>
+
+    <div class="container">
+
+      <!-- form -->
+      <form name="datapribadi" method="" action="">
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Nama</label>
+          <input type="text" class="form-control" name="nama" id="exampleFormControlInput1"
+            placeholder="isi nama asli...." />
+          <label for="exampleFormControlInput1">Email</label>
+          <input type="email" class="form-control" name="email" id="exampleFormControlInput2"
+            placeholder="isi email aktif...." />
+          <label for="exampleFormControlInput1">Tanggal Wisata</label>
+          <input type="date" class="form-control" name="tgl" id="exampleFormControlInput2" placeholder="isi tgl...." />
+          <label for="exampleFormControlInput1">Jumlah Tiket</label>
+          <input type="number" class="form-control" name="jml_tiket" id="exampleFormControlInput2"
+            placeholder="isi jml tiket...." />
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Destinasi/Wisata</label>
+          <select class="form-control" name="wisata" id="exampleFormControlSelect1">
+            <option value="#">==Pilih Wisata==</option>
+            <option value="raja ampat">Raja Ampat</option>
+            <option value="bali">Bali</option>
+            <option value="candi borobudur">Candi Borobudur</option>
+            <option value="pulau komodo">Pulau Komodo</option>
+            <option value="taman safari">Taman Safari</option>
+            <option value="monas jakarta">Monas Jakarta</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Catatan</label>
+          <textarea class="form-control mb-3" name="catatan" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <butaton type="button" onClick="inputdata()" class="btn btn-success booking" data-id="3">
+            Simpan
+          </butaton>
+          <button type="reset" class="btn btn-dark">Reset</button>
+          <button onclick="window.print()" type="submit" class="btn btn-danger">Cetak</button>
+        </div>
+        <hr>
+        <div class="row">
+          <table class="table" id="databel">
+            <thead>
+              <tr class="users-table-info" style="background-color: #ebf746	;">
+                <th scope="col">Nama</th>
+                <th scope="col">Email</th>
+                <th scope="col">Wisata</th>
+                <th scope="col">Tanggal</th>
+                <th scope="col">Jumlah Tiket</th>
+                <th scope="col">Catatan</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </form>
+
+    </div>
+    </table>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="socials">
+        <ul class="flex-icon">
+        </ul>
+      </div>
+      <div class="contact">
+        <p>Contact me</p>
+        <ul>
+          <li>
+            <a href="https://wa.me/628111" target="_blank"><img src="assets/images/svg_whatsapp.svg"
+                alt="Whatsapp Logo" />
+            </a>
+            <span>+6287887727217</span>
+          </li>
+          <li>
+            <span></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>copyright &copy; 2022 | ERNI</p>
+    </div>
+  </footer>
+  <script src="assets/menu.js"></script>
+  <script src="assets/slideshow.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</body>
+
+</html>
+
+<script>
+  function inputdata() {
+    var n = document.forms["datapribadi"]["nama"].value;
+    var e = document.forms["datapribadi"]["email"].value;
+    var p = document.forms["datapribadi"]["wisata"].value;
+    var i = document.forms["datapribadi"]["tgl"].value;
+    var u = document.forms["datapribadi"]["jml_tiket"].value;
+    var a = document.forms["datapribadi"]["catatan"].value;
+
+    var tabel = document.getElementById("databel");
+    var baris = tabel.insertRow(1);
+    var kol1 = baris.insertCell(0);
+    var kol2 = baris.insertCell(1);
+    var kol3 = baris.insertCell(2);
+    var kol4 = baris.insertCell(3);
+    var kol5 = baris.insertCell(4);
+    var kol6 = baris.insertCell(5);
+
+
+    kol1.innerHTML = n;
+    kol2.innerHTML = e;
+    kol3.innerHTML = p;
+    kol4.innerHTML = i;
+    kol5.innerHTML = u;
+    kol6.innerHTML = a;
+  }
+
+  $(".booking").click(function () {
+    var jawab = confirm(
+      "Apakah data yang anda masukan sudah sesuai dan benar, lanjutkan ke transaksi pembelian tiket wisata?");
+    if (jawab === true) {
+      //            kita set hapus false untuk mencegah duplicate request
+      var hapus = false;
+      if (!hapus) {
+        hapus = true;
+        $.post('booking.php', {
+            id: $(this).attr('data-id')
+          },
+          function (data) {
+            alert(data);
+          });
+        hapus = false;
+      }
+    } else {
+      return false;
+    }
+  });
+</script>
